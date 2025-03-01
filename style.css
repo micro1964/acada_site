@@ -153,6 +153,7 @@ section.home{
 /*====Nav Bar Styling Ends Here====*/
 
 /*====Banner Styling Starts Here====*/
+
 .home .banner{
     width: 100%;
     min-height: 100vh;
@@ -178,12 +179,13 @@ section.home{
 .banner .banner-desc p{
     color: var(--dark-heading-clr);
     line-height: 1.4;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 .banner .banner-desc .search-bar{
     position: relative;
     width: 400px;
     height: 50px;
+    margin-bottom: 20px;
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -194,7 +196,7 @@ section.home{
     padding: 0px 60px 0px 10px;
     font-size: 17px;
     letter-spacing: 1px;
-    background-color: var(--primary-light-clr);
+    background-color: var(--primary-dark-clr);
     color: var(--primary-medium-clr);
     border: 2px solid var(--bg-clr-1);
     border-radius: 5px;
@@ -205,7 +207,7 @@ section.home{
     position: absolute;
     height: 100%;
     width: 50px;
-    background-color: var(--primary-light-clr);
+    background-color: var(--primary-medium-clr);
     right: 2px;
     color: var(--primary-medium-clr);
     border-radius: 0px 5px 5px 0px;
@@ -214,9 +216,191 @@ section.home{
     align-items: center;
     cursor: pointer;
 }
-.banner img{
-    width: 55%;
+.home .banner{
+    padding-right: 0%;
+    padding-top: 0%;
 }
+.banner .banner-img-container{
+    width: 100%;
+    top: 0%;
+}
+
+.banner-img .banner-img-container .states{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+.banner-img-container .states .total-courses{
+    position: relative;
+    padding: 6px 10px 6px 6px;
+    background-color: var(--primary-medium-clr);
+    border-radius: 5px;
+    bottom: 15%;
+    left: -80px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.3);
+    z-index: 5;
+}
+
+.states .total-courses .icon{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-clr-1);
+    margin-right: 7px;
+}
+
+.states .total-courses .icon i{
+    font-size: 22px;
+    color: var(--light-heading-clr);
+}
+
+.states .total-courses .desc{
+    display: flex;
+    flex-direction: column;
+}
+
+.states .total-courses .desc span:nth-child(1){
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 2px;
+}
+
+.states .total-courses .desc span:nth-child(2){
+    font-size: 15px;
+    color: var(--dark-heading-clr);
+}
+
+.states .courses-ratings{
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: var(--light-heading-clr);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 80px;
+    right: 5px;
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.3);
+}
+
+.states .courses-ratings span:nth-child(1){
+    color: var(--dark-heading-clr);
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+}
+.states .courses-ratings span:nth-child(1) i{
+    color: var(--primary-clr);
+    font-size: 14px;
+}
+.states .courses-ratings span:nth-child(2){
+    color: var(--dark-heading-clr);
+    font-size: 15px;
+    text-align: center;
+}
+    
+/*
+.banner .banner-desc .states{  
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+    */
+
+
+.banner-img-container img{
+    float: right;
+}
+img{
+    padding-top: 20%;
+    width: 150%;
+    align-self: flex-end;
+}
+    
 /*====Banner Styling Ends Here====*/
 
 /*====Home Section Styling Ends Here====*/
+
+/* Media Query Starts Here*/
+@media(max-width: 986px){
+    /* Home Section*/
+    .main-navbar .menu-btn{
+        display: flex;
+        margin-left: 40px;
+        /*z-index: 101;*/
+    }
+    .main-navbar .nav-list{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--primary-light-clr);
+        transition: 0.3s cubic-bezier(.15, .61, .94, .25);
+        /*z-index: 100;*/
+    }
+    .main-navbar .nav-list li{
+        margin: 25px 0px 0px;
+    }
+    .main-navbar .nav-list li:nth-child(1){
+        margin-top: 180px;
+    }
+    .main-navbar .nav-list li a{
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+    .main-navbar .get-started-btn-container{
+        margin-left: auto;
+    }
+    .home .banner{
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .home .banner .banner-desc,
+    .home .banner .banner-img
+    {
+        flex-basis: 100%;
+    }
+    .home .banner .banner-img{
+        align-self: center;
+        margin-bottom: 50px;
+    }
+    .banner .banner-desc h2{
+        font-size: 42px;
+    }
+}
+@media(max-width: 786px){}
+@media(max-width: 686px){}
+@media(max-width: 586px){}
+@media(max-width: 486px){
+    .banner-img .banner-img-container{
+        width: 100%;
+    }
+    .banner .banner-desc .search-bar{
+        width: 100%;
+    }
+    .banner-img-container .states .courses-ratings{
+        top: 30px;
+        right: -10px;
+    }
+    .banner .banner-desc h2{
+        font-size: 32px;
+    }
+
+}
+/* Media Query Ends Here*/
